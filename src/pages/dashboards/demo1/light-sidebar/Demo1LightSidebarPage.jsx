@@ -15,8 +15,8 @@ const Demo1LightSidebarPage = () => {
   return <Fragment>
     <Container>
       <Toolbar>
-        <ToolbarHeading title="Dashboard" description="Central Hub for Personal Customization" />
-        <ToolbarActions>
+        <ToolbarHeading title="Dashboard" description="Central Hub for Liberty91" />
+        {/* <ToolbarActions>
           <Popover>
             <PopoverTrigger asChild>
               <button id="date" className={cn('btn btn-sm btn-light data-[state=open]:bg-light-active', !date && 'text-gray-400')}>
@@ -30,7 +30,7 @@ const Demo1LightSidebarPage = () => {
               <Calendar initialFocus mode="range" defaultMonth={date?.from} selected={date} onSelect={setDate} numberOfMonths={2} />
             </PopoverContent>
           </Popover>
-        </ToolbarActions>
+        </ToolbarActions> */}
       </Toolbar>
     </Container>
 

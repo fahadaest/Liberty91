@@ -25,13 +25,13 @@ const HeaderTopbar = () => {
     setSearchModalOpen(false);
   };
   return <div className="flex items-center gap-2 lg:gap-3.5">
-      <button onClick={handleOpen} className="btn btn-icon btn-icon-lg size-9 rounded-full hover:bg-primary-light hover:text-primary text-gray-500">
-        <KeenIcon icon="magnifier" />
-      </button>
-      <ModalSearch open={searchModalOpen} onOpenChange={handleClose} />
+    <button onClick={handleOpen} className="btn btn-icon btn-icon-lg size-9 rounded-full hover:bg-primary-light hover:text-primary text-gray-500">
+      <KeenIcon icon="magnifier" />
+    </button>
+    <ModalSearch open={searchModalOpen} onOpenChange={handleClose} />
 
-      <Menu>
-        <MenuItem ref={itemChatRef} onShow={handleShow} toggle="dropdown" trigger="click" dropdownProps={{
+    {/* <Menu>
+      <MenuItem ref={itemChatRef} onShow={handleShow} toggle="dropdown" trigger="click" dropdownProps={{
         placement: isRTL() ? 'bottom-start' : 'bottom-end',
         modifiers: [{
           name: 'offset',
@@ -40,18 +40,18 @@ const HeaderTopbar = () => {
           }
         }]
       }}>
-          <MenuToggle className="btn btn-icon btn-icon-lg size-9 rounded-full hover:bg-primary-light hover:text-primary dropdown-open:bg-primary-light dropdown-open:text-primary text-gray-500">
-            <KeenIcon icon="messages" />
-          </MenuToggle>
+        <MenuToggle className="btn btn-icon btn-icon-lg size-9 rounded-full hover:bg-primary-light hover:text-primary dropdown-open:bg-primary-light dropdown-open:text-primary text-gray-500">
+          <KeenIcon icon="messages" />
+        </MenuToggle>
 
-          {DropdownChat({
+        {DropdownChat({
           menuTtemRef: itemChatRef
         })}
-        </MenuItem>
-      </Menu>
+      </MenuItem>
+    </Menu> */}
 
-      <Menu>
-        <MenuItem ref={itemAppsRef} toggle="dropdown" trigger="click" dropdownProps={{
+    {/* <Menu>
+      <MenuItem ref={itemAppsRef} toggle="dropdown" trigger="click" dropdownProps={{
         placement: isRTL() ? 'bottom-start' : 'bottom-end',
         modifiers: [{
           name: 'offset',
@@ -60,15 +60,15 @@ const HeaderTopbar = () => {
           }
         }]
       }}>
-          <MenuToggle className="btn btn-icon btn-icon-lg size-9 rounded-full hover:bg-primary-light hover:text-primary dropdown-open:bg-primary-light dropdown-open:text-primary text-gray-500">
-            <KeenIcon icon="element-11" />
-          </MenuToggle>
+        <MenuToggle className="btn btn-icon btn-icon-lg size-9 rounded-full hover:bg-primary-light hover:text-primary dropdown-open:bg-primary-light dropdown-open:text-primary text-gray-500">
+          <KeenIcon icon="element-11" />
+        </MenuToggle>
 
-          {DropdownApps()}
-        </MenuItem>
-      </Menu>
+        {DropdownApps()}
+      </MenuItem>
+    </Menu> */}
 
-      <Menu>
+    {/* <Menu>
         <MenuItem ref={itemNotificationsRef} toggle="dropdown" trigger="click" dropdownProps={{
         placement: isRTL() ? 'bottom-start' : 'bottom-end',
         modifiers: [{
@@ -85,10 +85,10 @@ const HeaderTopbar = () => {
           menuTtemRef: itemNotificationsRef
         })}
         </MenuItem>
-      </Menu>
+      </Menu> */}
 
-      <Menu>
-        <MenuItem ref={itemUserRef} toggle="dropdown" trigger="click" dropdownProps={{
+    <Menu>
+      <MenuItem ref={itemUserRef} toggle="dropdown" trigger="click" dropdownProps={{
         placement: isRTL() ? 'bottom-start' : 'bottom-end',
         modifiers: [{
           name: 'offset',
@@ -97,14 +97,14 @@ const HeaderTopbar = () => {
           }
         }]
       }}>
-          <MenuToggle className="btn btn-icon rounded-full">
-            <img className="size-9 rounded-full border-2 border-success shrink-0" src={toAbsoluteUrl('/media/avatars/300-2.png')} alt="" />
-          </MenuToggle>
-          {DropdownUser({
+        <MenuToggle className="btn btn-icon rounded-full">
+          <img className="size-9 rounded-full border-2 border-success shrink-0" src={toAbsoluteUrl('/media/avatars/300-2.png')} alt="" />
+        </MenuToggle>
+        {DropdownUser({
           menuItemRef: itemUserRef
         })}
-        </MenuItem>
-      </Menu>
-    </div>;
+      </MenuItem>
+    </Menu>
+  </div>;
 };
 export { HeaderTopbar };
