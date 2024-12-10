@@ -45,21 +45,21 @@ const Main = () => {
     };
   }, []);
   return <Fragment>
-      <Helmet>
-        <title>{menuItem?.title}</title>
-      </Helmet>
+    <Helmet>
+      <title>{menuItem?.title}</title>
+    </Helmet>
 
-      <Sidebar />
+    <Sidebar />
 
-      <div className="wrapper flex grow flex-col">
-        <Header />
+    <div className="wrapper flex grow flex-col">
+      <Header />
 
-        <main className="grow content pt-5" role="content">
-          <Outlet />
-        </main>
+      <main className="grow content pt-5 bg-customLight" role="content">
+        <Outlet />
+      </main>
 
-        <Footer />
-      </div>
-    </Fragment>;
+      <Footer />
+    </div>
+  </Fragment>;
 };
 export { Main };

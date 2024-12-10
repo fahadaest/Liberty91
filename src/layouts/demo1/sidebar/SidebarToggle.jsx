@@ -12,7 +12,7 @@ const SidebarToggle = () => {
   } = useMatchPath('/dark-sidebar');
   const handleClick = () => {
     if (layout.options.sidebar.collapse) {
-      setSidebarCollapse(false);
+      setSidebarCollapse(false); s
     } else {
       setSidebarCollapse(true);
     }
@@ -21,18 +21,18 @@ const SidebarToggle = () => {
   const iconClass = clsx('transition-all duration-300', layout.options.sidebar.collapse ? 'ltr:rotate-180' : 'rtl:rotate-180');
   const lightToggle = () => {
     return <button onClick={handleClick} className={clsx(buttonBaseClass, 'border-gray-200 dark:border-gray-300')} aria-label="Toggle sidebar">
-        <KeenIcon icon="black-left-line" className={iconClass} />
-      </button>;
+      <KeenIcon icon="black-left-line" className={iconClass} />
+    </button>;
   };
   const darkToggle = () => {
     return <div onClick={handleClick}>
-        <div className="hidden [html.dark_&]:block">
-          <button className={clsx(buttonBaseClass, 'border-gray-300')}>
-            <KeenIcon icon="black-left-line" className={iconClass} />
-          </button>
-        </div>
-        <div className="[html.dark_&]:hidden light">{lightToggle()}</div>
-      </div>;
+      <div className="hidden [html.dark_&]:block">
+        <button className={clsx(buttonBaseClass, 'border-gray-300')}>
+          <KeenIcon icon="black-left-line" className={iconClass} />
+        </button>
+      </div>
+      <div className="[html.dark_&]:hidden light">{lightToggle()}</div>
+    </div>;
   };
   return match ? darkToggle() : lightToggle();
 };

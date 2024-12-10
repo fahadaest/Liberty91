@@ -21,7 +21,7 @@ export const apiSlice = createApi({
     }),
     endpoints: (builder) => ({
         fetchOpenSourceFeed: builder.query({
-            query: (pageSize = 30) =>
+            query: (pageSize = 15) =>
                 `api/v1/dashboard/open_source/feed/?page_size=${pageSize}`,
         }),
         fetchPremiumFeed: builder.query({

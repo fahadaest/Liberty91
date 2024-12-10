@@ -12,7 +12,7 @@ const Demo1Layout = () => {
     dark:bg-[--tw-page-bg-dark]
   `);
   return <Demo1LayoutProvider>
-      <Main />
-    </Demo1LayoutProvider>;
+    <Main />
+  </Demo1LayoutProvider>;
 };
 export { Demo1Layout };
