@@ -21,14 +21,16 @@ export const apiSlice = createApi({
     }),
     endpoints: (builder) => ({
         fetchOpenSourceFeed: builder.query({
-            query: (pageSize = 30) =>
-                `api/v1/dashboard/open_source/feed/?page_size=${pageSize}`,
+            query: ({ pageNumber, pageSize }) =>
+                `api/v1/dashboard/open_source/feed/?page=${pageNumber}&page_size=${pageSize}`,
         }),
         fetchPremiumFeed: builder.query({
-            query: () => `api/v1/dashboard/premium/feed/`,
+            query: ({ pageNumber, pageSize }) =>
+                `api/v1/dashboard/premium/feed/?page=${pageNumber}&page_size=${pageSize}`,
         }),
         fetchTwitterFeed: builder.query({
-            query: () => `api/v1/dashboard/twitter/feed/`,
+            query: ({ pageNumber, pageSize }) =>
+                `api/v1/dashboard/twitter/feed/?page=${pageNumber}&page_size=${pageSize}`,
         }),
     }),
 });

@@ -8,15 +8,15 @@ import { addDays, format } from 'date-fns';
 import { cn } from '@/lib/utils';
 import { KeenIcon } from '@/components/keenicons';
 const Demo1LightSidebarPage = () => {
-  const [date, setDate] = useState({
-    from: new Date(2025, 0, 20),
-    to: addDays(new Date(2025, 0, 20), 20)
-  });
+  // const [date, setDate] = useState({
+  //   from: new Date(2025, 0, 20),
+  //   to: addDays(new Date(2025, 0, 20), 20)
+  // });
   return <Fragment>
-    <Container>
+    {/* <Container>
       <Toolbar>
         <ToolbarHeading title="Dashboard" description="Central Hub for Liberty91" />
-        {/* <ToolbarActions>
+        <ToolbarActions>
           <Popover>
             <PopoverTrigger asChild>
               <button id="date" className={cn('btn btn-sm btn-light data-[state=open]:bg-light-active', !date && 'text-gray-400')}>
@@ -30,9 +30,9 @@ const Demo1LightSidebarPage = () => {
               <Calendar initialFocus mode="range" defaultMonth={date?.from} selected={date} onSelect={setDate} numberOfMonths={2} />
             </PopoverContent>
           </Popover>
-        </ToolbarActions> */}
+        </ToolbarActions>
       </Toolbar>
-    </Container>
+    </Container> */}
 
     <Container>
       <Demo1LightSidebarContent />

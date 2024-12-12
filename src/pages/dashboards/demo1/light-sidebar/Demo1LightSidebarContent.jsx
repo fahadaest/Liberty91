@@ -1,26 +1,20 @@
-import { ChannelStats, EarningsChart, EntryCallout, Highlights, TeamMeeting, Teams } from './blocks';
-import { OpenSource, PremiumFeed, XFeed } from '../../../../components/recent-threats';
-import { Activities } from '../../../public-profile/profiles/creator';
+import { OpenSource, PremiumFeed, Xfeed } from '../../../../components/recent-threats-components';
+
 const Demo1LightSidebarContent = () => {
-  return <div className="gap-5 lg:gap-7.5 flex">
-
-    <div className="">
-      <div className="lg:col-span-1">
-        <OpenSource />
+  return (
+    <div className="h-screen overflow-y-auto flex gap-5 lg:gap-7.5">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-7.5 w-full">
+        <div className="w-full">
+          <OpenSource />
+        </div>
+        <div className="w-full">
+          <PremiumFeed />
+        </div>
+        <div className="w-full">
+          <Xfeed />
+        </div>
       </div>
     </div>
-
-    <div className="">
-      <div className="lg:col-span-1">
-        <PremiumFeed />
-      </div>
-    </div>
-
-    <div className="">
-      <div className="lg:col-span-1">
-        <XFeed />
-      </div>
-    </div>
-  </div>;
+  );
 };
 export { Demo1LightSidebarContent };
